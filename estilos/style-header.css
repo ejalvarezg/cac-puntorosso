@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  background-color: #e9ebf8;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-principal a {
+  color: #221d23;
+  text-decoration: none;
+}
+
+.iconos {
+  width: 1.2em;
+}
+
+.idioma {
+  position: absolute;
+  color: #4da1ac;
+}
+
+.idioma select {
+  background-color: #e9ebf8;
+  border: none;
+  color: #4da1ac;
+}
+
+.barra-amarilla {
+  height: 1em;
+  max-height: 10px;
+  background-color: #e1c561;
+}
+
+.barra-verde {
+  height: 2em;
+  max-height: 20px;
+  background-color: #4da1ac;
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 576px) {
+  header {
+    padding: 2.5em 0 0 0;
+  }
+
+  /*Quizá está regla redunda, comparar con header ul */
+  .menu-principal ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-principal a {
+    font-weight: 700;
+    display: block;
+    padding: 0.5em 1em;
+  }
+
+  .logo,
+  .redes-sociales {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .idioma {
+    padding: 0.2em;
+    top: 0;
+    right: 0;
+    font-size: 0.8em;
+  }
+
+  .idioma select {
+    background-color: #e9ebf8;
+    border: none;
+    color: #4da1ac;
+  }
+}
+
+/* TABLETS */
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .menu, .header-izquierda {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+  }
+
+  .menu-principal ul {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+  }
+
+  .menu-principal a {
+    font-weight: 700;
+    padding: 10px;
+  }
+
+  .logo {
+    visibility: visible;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+
+  #logo-header {
+    width: 15em;
+    padding-top: 30px;
+  }
+
+  .redes-sociales ul {
+    position: absolute;
+    top: 1.5em;
+    right: 0.5em;
+  }
+
+  .iconos {
+    padding: 3px;
+  }
+
+  .idioma {
+    position: absolute;
+    padding: 0.2em;
+    border-radius: 10%;
+    top: 0;
+    left: 70%;
+    font-size: 0.8em;
+  }
+
+  .idioma select {
+    background-color: #e9ebf8;
+    border: none;
+  }
+}
+
+/* LAPTOPS */
+
+@media only screen and (min-width: 769px) {
+  .menu, .header-izquierda, 
+  .redes-sociales ul {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .menu-principal {
+    padding-left: 3em;
+  }
+
+  .menu-principal ul {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+  }
+
+  .menu-principal a {
+    font-weight: 700;
+    padding: 10px;
+  }
+
+  .menu-principal a:hover {
+    background-color: #c22826;
+    color: #e9ebf8;
+    padding: 0.5em 1.2em;
+  }
+
+  .logo {
+    visibility: visible;
+  }
+
+  #logo-header {
+    width: 20vw;
+    padding-top: 30px;
+  }
+
+  .iconos {
+    width: 1.3em;
+    padding: 5px;
+  }
+
+  .idioma {
+    position: absolute;
+    padding: 0.2em;
+    border-radius: 10%;
+    top: 0;
+    left: 70%;
+    font-size: 0.8em;
+  }
+
+  .idioma select {
+    background-color: #e9ebf8;
+    border: none;
+  }
+}
