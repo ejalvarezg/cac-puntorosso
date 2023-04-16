@@ -1,35 +1,88 @@
 * {
-    margin: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: small;
+  font-size: small;
+}
+
+footer {
+  /* background-color: #9CCBD3; */
+  background-color: #4da1ac;
+  padding: 0 0 0.5em 0;
+  color: #e9ebf8;
+}
+
+footer ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-footer a,
+.redes-sociales-item a {
+  /* color: #221d23; */
+  color: #e9ebf8;
+  text-decoration: none;
+}
+
+.copy p{
+  text-align: center;
+  opacity: 0.8;
+  font-size: 0.8em;
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 576px) {
+  .footer-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
   }
-  
-  footer {
-    background-color: #4da1ac;
-    padding: 0 0 0.5em 0;
-  }
-  
-  footer ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
+
   .menu-footer a {
-    color: #221d23;
-    text-decoration: none;
+    display: block;
+    padding: 0.5em 0.5em;
   }
-  
-  @media only screen and (max-width: 576px) {
-      footer, .footer-container {
-          display: flex;
-          justify-content: center;
-          flex-direction: column;
-        }
-  
-      .menu-footer a {
-          display: block;
-          padding: 0.5em 0.5em;
-        }
+}
+
+/* TABLETS */
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
   }
-  
+
+  footer h2 {
+    font-size: 2em;
+    color: black;
+  }
+
+  .menu-footer a, .redes-sociales-item a, .canales p {
+    display: block;
+    padding: 0.5em 0.5em;
+  }
+}
+
+/* LAPTOPS */
+
+@media only screen and (min-width: 769px) {
+  .footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 0 0 1.5em 0;
+  }
+
+  footer h2 {
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: normal;
+    justify-content: center;
+    padding: 0 0 1em 0;
+  }
+
+  .menu-footer a, .redes-sociales-item a, .canales p {
+    display: block;
+    padding: 0.5em 0;
+  }
+}

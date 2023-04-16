@@ -16,6 +16,7 @@ header ul {
 .menu-principal a {
   color: #221d23;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .iconos {
@@ -147,6 +148,10 @@ header ul {
 /* LAPTOPS */
 
 @media only screen and (min-width: 769px) {
+  body {
+    max-width: 1500px;
+  }
+
   .menu, .header-izquierda, 
   .redes-sociales ul {
     display: flex;
@@ -166,14 +171,17 @@ header ul {
   }
 
   .menu-principal a {
-    font-weight: 700;
-    padding: 10px;
+    /* font-weight: 700; */
+    padding: 10px 1.3em;
+    font-size: 1.2em;
+    opacity: 0.7;
   }
 
   .menu-principal a:hover {
     background-color: #c22826;
     color: #e9ebf8;
     padding: 0.5em 1.2em;
+    opacity: 1;
   }
 
   .logo {
@@ -186,8 +194,8 @@ header ul {
   }
 
   .iconos {
-    width: 1.3em;
-    padding: 5px;
+    width: 1.5em;
+    padding: 0.5em;
   }
 
   .idioma {
