@@ -1,10 +1,27 @@
+@font-face {
+  font-family: "Wolf Sans";
+  src: url("./font/wolf-sans-sc-regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "grqalir";
+  src: url("./font/grqalir-bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
 * {
   margin: 0;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* Esta regla va a cambiar el tamaño de muchas cosas,
+      usar al tener todo listo para corregir escalas"*/
+  /* box-sizing: border-box; */
+  font-family: "grqalir", sans-serif;
 }
 
 header {
-  background-color: #e9ebf8;
+  background-color: whitesmoke;
 }
 
 header ul {
@@ -26,12 +43,13 @@ header ul {
 .idioma {
   position: absolute;
   color: #4da1ac;
+  /* border: 0.5px solid #4da1ac; */
+  font-size: 0.8em;
+  display: inline-block;
 }
 
-.idioma select {
-  background-color: #e9ebf8;
-  border: none;
-  color: #4da1ac;
+.idioma p {
+  padding: 0.1em 0.5em;
 }
 
 .barra-amarilla {
@@ -78,20 +96,28 @@ header ul {
     padding: 0.2em;
     top: 0;
     right: 0;
-    font-size: 0.8em;
+    border: none;
   }
 
-  .idioma select {
+  .desplegable {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+
+  /* .idiomade select {
     background-color: #e9ebf8;
     border: none;
     color: #4da1ac;
-  }
+  } */
 }
 
 /* TABLETS */
 
 @media only screen and (min-width: 577px) and (max-width: 768px) {
-  .menu, .header-izquierda {
+  .menu,
+  .header-izquierda {
     display: flex;
     align-items: flex-end;
     flex-direction: row;
@@ -133,15 +159,66 @@ header ul {
   .idioma {
     position: absolute;
     padding: 0.2em;
-    border-radius: 10%;
     top: 0;
-    left: 70%;
-    font-size: 0.8em;
+    left: 80%;
   }
 
-  .idioma select {
-    background-color: #e9ebf8;
+  .desplegable {
+    justify-content: center;
+    display: none;
+    position: absolute;
+    overflow: auto;
+    box-shadow: 0px 2px 2px 0px #4da1ac;
+  }
+
+  .idioma:hover .desplegable {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .idioma button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #4da1ac; /* Green */
     border: none;
+    border-radius: 12px;
+    color: #e9ebf8;
+    padding: 0.5em 1em;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.5s;
+  }
+
+  .idioma button:hover {
+    border: 1px solid #4da1ac;
+    background-color: #e9ebf8;
+    color: #221d23;
+  }
+
+  #angle-down {
+    width: 0.5em;
+  }
+
+  .desplegable {
+    justify-content: center;
+    display: none;
+    position: absolute;
+    overflow: auto;
+    box-shadow: 0px 2px 2px 0px #4da1ac;
+  }
+
+  .idioma:hover .desplegable {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 
@@ -152,7 +229,8 @@ header ul {
     max-width: 1500px;
   }
 
-  .menu, .header-izquierda, 
+  .menu,
+  .header-izquierda,
   .redes-sociales ul {
     display: flex;
     align-items: flex-end;
@@ -190,7 +268,7 @@ header ul {
 
   #logo-header {
     width: 20vw;
-    padding-top: 30px;
+    padding: 10px;
   }
 
   .iconos {
@@ -201,14 +279,48 @@ header ul {
   .idioma {
     position: absolute;
     padding: 0.2em;
-    border-radius: 10%;
     top: 0;
     left: 70%;
-    font-size: 0.8em;
   }
 
-  .idioma select {
-    background-color: #e9ebf8;
+  .idioma button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #4da1ac; /* Green */
     border: none;
+    border-radius: 12px;
+    color: #e9ebf8;
+    padding: 0.5em 1em;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.5s;
+  }
+
+  .idioma button:hover {
+    border: 1px solid #4da1ac;
+    background-color: #e9ebf8;
+    color: #221d23;
+  }
+
+  #angle-down {
+    width: 0.5em;
+  }
+
+  .desplegable {
+    justify-content: center;
+    display: none;
+    position: absolute;
+    overflow: auto;
+    box-shadow: 0px 2px 2px 0px #4da1ac;
+  }
+
+  .idioma:hover .desplegable {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }

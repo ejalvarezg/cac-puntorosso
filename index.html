@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="imagenes/logo.png" type="image/x-icon" />
-    <link rel="stylesheet" href=estilos/style-header.css> <link rel="stylesheet"
-    href=estilos/style-index.css> <link rel="stylesheet"
-    href=estilos/style-footer.css>
-    <title>Heladeria</title>
+    <link rel="shortcut icon" href="./imagenes/logo.ico" type="image/x-icon" />
+    <link rel="stylesheet" href=./estilos/style-header.css> <link rel="stylesheet"
+    href=./estilos/style-index.css> <link rel="stylesheet"
+    href=./estilos/style-footer.css>
+    <title>Punto Rosso</title>
   </head>
   <body>
     <!-- header -->
@@ -18,7 +18,7 @@
           <div class="logo">
             <img
               id="logo-header"
-              src="/imagenes/logo.png"
+              src="./imagenes/logo.png"
               alt="Logo Punto Rosso"
             />
           </div>
@@ -42,34 +42,48 @@
             <ul>
               <li class="facebook">
                 <a href="#"
-                  ><img src="/iconos/facebook.png" alt="fb" class="iconos"
+                  ><img src="./iconos/facebook.png" alt="fb" class="iconos"
                 /></a>
               </li>
               <li class="instagram">
                 <a href="#"
-                  ><img src="/iconos/instagram.png" alt="ig" class="iconos"
+                  ><img src="./iconos/instagram.png" alt="ig" class="iconos"
                 /></a>
               </li>
               <li class="yotube">
                 <a href="#"
-                  ><img src="/iconos/youtube.png" alt="yt" class="iconos"
+                  ><img src="./iconos/youtube.png" alt="yt" class="iconos"
                 /></a>
               </li>
               <li class="twitter">
                 <a href="#"
-                  ><img src="/iconos/twitter.png" alt="tw" class="iconos"
+                  ><img src="./iconos/twitter.png" alt="tw" class="iconos"
                 /></a>
               </li>
             </ul>
           </div>
         </div>
 
-        <div class="idioma">
-          <label for="language">Idioma</label>
+        <!-- <div class="idioma"> -->
+          <!-- <p>Idioma</p>
+          <ul class="desplegable">
+            <li><img src="./imagenes/spanish.png" alt="es" class="iconos"></li>
+            <li><img src="./imagenes/english.png" alt="en" class="iconos"></li>
+          </ul> -->
+          <!-- <label for="language">Idioma</label>
           <select name="language" id="language">
-            <option value="lang-es">es</option>
-            <option value="lang-en">en</option>
-          </select>
+            <option value="lang-es"><img src="./imagenes/spanish.png" alt="es" class="iconos"></option>
+            <option value="lang-en"><img src="./imagenes/english.png" alt="en" class="iconos"></option>
+          </select> -->
+        <!-- </div> -->
+
+        <div class="idioma">
+          <button>Idioma</button>
+          <!-- <img src="./iconos/angle-down.svg" alt="" id="angle-down"> -->
+          <div class="desplegable">
+          <a href="#"><img src="./imagenes/spanish.png" alt="es" class="iconos"></a>
+          <a href="#"><img src="./imagenes/english.png" alt="en" class="iconos"></a>
+          </div>
         </div>
       </div>
     </header>
@@ -80,10 +94,10 @@
       <div class="contenedor-main">
         <div class="slider">
           <ul>
-            <li><img src="imagenes/banner1.jpg" alt="foto 1" /></li>
-            <li><img src="imagenes/banner2.jpg" alt="foto 2" /></li>
-            <li><img src="imagenes/banner3.jpg" alt="foto 3" /></li>
-            <li><img src="imagenes/banner4.jpg" alt="foto 4" /></li>
+            <li><img src="./imagenes/banner1.jpg" alt="foto 1" /></li>
+            <li><img src="./imagenes/banner2.jpg" alt="foto 2" /></li>
+            <li><img src="./imagenes/banner3.jpg" alt="foto 3" /></li>
+            <li><img src="./imagenes/banner4.jpg" alt="foto 4" /></li>
           </ul>
         </div>
       </div>
