@@ -14,9 +14,6 @@
 
 * {
   margin: 0;
-  /* Esta regla va a cambiar el tamaño de muchas cosas,
-      usar al tener todo listo para corregir escalas"*/
-  /* box-sizing: border-box; */
   font-family: "grqalir", sans-serif;
 }
 
@@ -36,15 +33,7 @@ header ul {
   text-transform: uppercase;
 }
 
-.iconos {
-  width: 1.2em;
-}
-
 .idioma {
-  position: absolute;
-  color: #4da1ac;
-  /* border: 0.5px solid #4da1ac; */
-  font-size: 0.8em;
   display: inline-block;
 }
 
@@ -53,13 +42,13 @@ header ul {
 }
 
 .barra-amarilla {
-  height: 1em;
+  height: 0.5em;
   max-height: 10px;
   background-color: #e1c561;
 }
 
 .barra-verde {
-  height: 2em;
+  height: 1em;
   max-height: 20px;
   background-color: #4da1ac;
 }
@@ -67,15 +56,15 @@ header ul {
 /* MOBILE */
 
 @media only screen and (max-width: 576px) {
-  header {
-    padding: 2.5em 0 0 0;
+
+  .logo {
+    text-align: center;
+    padding: 1.5em 0 0.5em;
   }
 
-  /*Quizá está regla redunda, comparar con header ul */
-  .menu-principal ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  #logo-header {
+    max-width: 80vw;
+    margin: 0 auto;
   }
 
   .menu-principal a {
@@ -84,7 +73,6 @@ header ul {
     padding: 0.5em 1em;
   }
 
-  .logo,
   .redes-sociales {
     visibility: hidden;
     position: absolute;
@@ -93,124 +81,136 @@ header ul {
   }
 
   .idioma {
+    position: absolute;
     padding: 0.2em;
     top: 0;
     right: 0;
-    border: none;
+    font-size: 0.5em;
   }
-
-  .desplegable {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-    flex-direction: row;
-  }
-
-  /* .idiomade select {
-    background-color: #e9ebf8;
-    border: none;
-    color: #4da1ac;
-  } */
-}
-
-/* TABLETS */
-
-@media only screen and (min-width: 577px) and (max-width: 768px) {
-  .menu,
-  .header-izquierda {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: row;
-  }
-
-  .menu-principal ul {
-    display: flex;
-    flex-direction: row;
-    padding-bottom: 10px;
-  }
-
-  .menu-principal a {
-    font-weight: 700;
-    padding: 10px;
-  }
-
-  .logo {
-    visibility: visible;
-    position: relative;
-    top: 0;
-    left: 0;
-  }
-
-  #logo-header {
-    width: 15em;
-    padding-top: 30px;
-  }
-
-  .redes-sociales ul {
-    position: absolute;
-    top: 1.5em;
-    right: 0.5em;
-  }
-
-  .iconos {
-    padding: 3px;
-  }
-
-  .idioma {
-    position: absolute;
-    padding: 0.2em;
-    top: 0;
-    left: 80%;
-  }
-
-  .desplegable {
-    justify-content: center;
-    display: none;
-    position: absolute;
-    overflow: auto;
-    box-shadow: 0px 2px 2px 0px #4da1ac;
-  }
-
-  .idioma:hover .desplegable {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
 
   .idioma button {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #4da1ac; /* Green */
+    background-color: #221d23;
     border: none;
     border-radius: 12px;
-    color: #e9ebf8;
+    color: whitesmoke;
     padding: 0.5em 1em;
     text-align: center;
     text-decoration: none;
     transition-duration: 0.5s;
   }
 
-  .idioma button:hover {
-    border: 1px solid #4da1ac;
-    background-color: #e9ebf8;
+  .idioma:hover button {
+    border: 1px solid #221d23;
+    background-color: whitesmoke;
     color: #221d23;
+  } /* Resolverlo como menú hamburguesa*/
+
+  .desplegable {
+    justify-content: center;
+    display: none;
+    overflow: auto;
+    box-shadow: 0px 2px 2px 0px #221d23;
   }
 
-  #angle-down {
-    width: 0.5em;
+  .idioma:hover .desplegable {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* TABLETS */
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .menu {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+
+  .logo {
+    visibility: visible;
+    padding: 1em;
+  }
+
+  #logo-header {
+    width: 30vw;
+  }
+
+  .navegable,
+  .nav-derecha {
+    display: flex;
+    justify-content: end;
+    flex-direction: row;
+    padding-bottom: 0.2em;
+  }
+
+  .menu-principal ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .menu-principal a {
+    font-weight: 700;
+    padding: 10px;
+    font-size: 1em;
+    opacity: 0.7;
+  }
+
+  .redes-sociales ul {
+    display: flex;
+    justify-content: end;
+    justify-content: space-around;
+    padding: 0 1em;
+  }
+
+  .iconos-redes, .iconos-idioma {
+    width: 1.1em;
+    padding: 0 0.2em;
+  }
+
+  .idioma {
+    position: absolute;
+    padding: 0.2em;
+    top: 0;
+    right: 0;
+    font-size: 0.5em;
+  }
+
+  .idioma button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #221d23;
+    border: none;
+    border-radius: 12px;
+    color: whitesmoke;
+    padding: 0.5em 1em;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.5s;
+  }
+
+  .idioma:hover button {
+    border: 1px solid #221d23;
+    background-color: whitesmoke;
+    color: #221d23;
   }
 
   .desplegable {
     justify-content: center;
     display: none;
-    position: absolute;
     overflow: auto;
-    box-shadow: 0px 2px 2px 0px #4da1ac;
+    box-shadow: 0px 2px 2px 0px #221d23;
   }
 
   .idioma:hover .desplegable {
@@ -230,57 +230,63 @@ header ul {
   }
 
   .menu,
-  .header-izquierda,
-  .redes-sociales ul {
+  .redes-sociales ul,
+  .nav-derecha {
     display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu,
+  .redes-sociales ul {
     flex-direction: row;
   }
 
-  .menu-principal {
-    padding-left: 3em;
+  .navegable {
+    flex-grow: 2;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  .nav-derecha {
+    justify-content: end;
+    padding: 0 1em;
   }
 
   .menu-principal ul {
     display: flex;
     flex-direction: row;
-    padding-bottom: 10px;
+    align-items: center;
   }
 
   .menu-principal a {
-    /* font-weight: 700; */
-    padding: 10px 1.3em;
+    font-weight: 700;
+    padding: 10px;
     font-size: 1.2em;
     opacity: 0.7;
   }
 
   .menu-principal a:hover {
     background-color: #c22826;
-    color: #e9ebf8;
+    color: whitesmoke;
     padding: 0.5em 1.2em;
     opacity: 1;
+    border-radius: 10px;
   }
 
   .logo {
+    flex-grow: 1;
     visibility: visible;
+    padding: 1em;
   }
 
   #logo-header {
-    width: 20vw;
-    padding: 10px;
+    width: 30vw;
   }
 
-  .iconos {
+  .iconos-redes, .iconos-idioma {
     width: 1.5em;
     padding: 0.5em;
-  }
-
-  .idioma {
-    position: absolute;
-    padding: 0.2em;
-    top: 0;
-    left: 70%;
   }
 
   .idioma button {
@@ -288,32 +294,27 @@ header ul {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #4da1ac; /* Green */
+    background-color: #221d23;
     border: none;
     border-radius: 12px;
-    color: #e9ebf8;
+    color: whitesmoke;
     padding: 0.5em 1em;
     text-align: center;
     text-decoration: none;
     transition-duration: 0.5s;
   }
 
-  .idioma button:hover {
-    border: 1px solid #4da1ac;
-    background-color: #e9ebf8;
+  .idioma:hover button {
+    border: 1px solid #221d23;
+    background-color: whitesmoke;
     color: #221d23;
-  }
-
-  #angle-down {
-    width: 0.5em;
   }
 
   .desplegable {
     justify-content: center;
     display: none;
-    position: absolute;
     overflow: auto;
-    box-shadow: 0px 2px 2px 0px #4da1ac;
+    box-shadow: 0px 2px 2px 0px #221d23;
   }
 
   .idioma:hover .desplegable {

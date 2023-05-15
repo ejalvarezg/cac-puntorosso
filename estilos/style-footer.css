@@ -3,10 +3,21 @@
 }
 
 footer {
-  /* background-color: #9CCBD3; */
   background-color: #4da1ac;
   padding: 0 0 0.5em 0;
-  color: #e9ebf8;
+  color: whitesmoke;
+}
+
+.footer-container {
+  display: flex;
+}
+
+footer h2 {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: normal;
+  justify-content: center;
+  padding: 0 0 1em 0;
 }
 
 footer ul {
@@ -17,8 +28,7 @@ footer ul {
 
 .menu-footer a,
 .redes-sociales-item a {
-  /* color: #221d23; */
-  color: #e9ebf8;
+  color: whitesmoke;
   text-decoration: none;
 }
 
@@ -28,61 +38,41 @@ footer ul {
   font-size: 0.8em;
 }
 
+.menu-footer a, .redes-sociales-item a, .canales p {
+  display: block;
+  padding: 0.5em 0;
+}
+
 /* MOBILE */
 
 @media only screen and (max-width: 576px) {
   .footer-container {
-    display: flex;
-    justify-content: center;
     flex-direction: column;
   }
 
-  .menu-footer a {
-    display: block;
-    padding: 0.5em 0.5em;
+  .menu-footer, .canales {
+    padding: 1em 2em;
+  }
+
+  .redes-sociales-footer {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }
 
-/* TABLETS */
+/* TABLETS Y LAPTOPS */
 
-@media only screen and (min-width: 577px) and (max-width: 768px) {
+@media only screen and (min-width: 577px) {
   .footer-container {
-    display: flex;
     justify-content: space-between;
     flex-direction: row;
-  }
-
-  footer h2 {
-    font-size: 2em;
-    color: black;
-  }
-
-  .menu-footer a, .redes-sociales-item a, .canales p {
-    display: block;
-    padding: 0.5em 0.5em;
+    padding: 0 1em 1.5em 1em;
   }
 }
 
 /* LAPTOPS */
 
-@media only screen and (min-width: 769px) {
-  .footer-container {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    padding: 0 0 1.5em 0;
-  }
-
-  footer h2 {
-    font-size: 1.5em;
-    text-transform: uppercase;
-    font-weight: normal;
-    justify-content: center;
-    padding: 0 0 1em 0;
-  }
-
-  .menu-footer a, .redes-sociales-item a, .canales p {
-    display: block;
-    padding: 0.5em 0;
-  }
-}
+/* @media only screen and (min-width: 769px) {
+} */
